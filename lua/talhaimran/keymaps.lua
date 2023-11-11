@@ -26,9 +26,11 @@ nnoremap("<A-k>", "<C-w>k")
 nnoremap("<A-h>", "<C-w>h")
 nnoremap("<A-l>", "<C-w>l")
 
--- FZF
-nnoremap("<A-p>", ":GFiles<CR>")
-nnoremap("<A-g>", ":FZF<CR>")
+-- Telescope
+local telescope_builtin = require('telescope.builtin')
+nnoremap("<A-g>", telescope_builtin.find_files)
+nnoremap("<A-p>", telescope_builtin.git_files)
+nnoremap("<leader>ps", require('telescope').extensions.live_grep_args.live_grep_args)
 
 -- Move text
 vnoremap("<", "<gv")
@@ -41,12 +43,12 @@ nnoremap("gcc", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>")
 xnoremap("gc", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- Ctrlsf
-nnoremap("<A-s>", ":CtrlSFToggle <CR>")
-nnoremap("<leader>ps", ":CtrlSF -S -- ''<Left>")
-nnoremap("<leader>pi", ":CtrlSF -I -- ''<Left>")
-nnoremap("<leader>pd", ":CtrlSF -S 'def '<Left>")
-nnoremap("<leader>w", ":CtrlSF <CR>")
-nnoremap("<leader>s", ":CtrlSFFocus <CR>")
+-- nnoremap("<A-s>", ":CtrlSFToggle <CR>")
+-- nnoremap("<leader>ps", ":CtrlSF -S -- ''<Left>")
+-- nnoremap("<leader>pi", ":CtrlSF -I -- ''<Left>")
+-- nnoremap("<leader>pd", ":CtrlSF -S 'def '<Left>")
+-- nnoremap("<leader>w", ":CtrlSF <CR>")
+-- nnoremap("<leader>s", ":CtrlSFFocus <CR>")
 
 -- Nvim Tree
 nnoremap("<A-x>", ":NvimTreeToggle<CR>")
@@ -96,6 +98,11 @@ nnoremap("<leader>ds", ":lua vim.diagnostic.enable()<CR>")
 
 -- Typescript OrganizeImports
 vim.cmd("command! -nargs=0 OR lua OrganizeImports()")
+
+-- Neogit
+nnoremap("<leader>gs", function()
+  require("neogit").open()
+end)
 
 function _smart_j()
   local count = vim.v.count
