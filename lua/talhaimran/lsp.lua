@@ -45,7 +45,3 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
-
-require("mason-null-ls").setup({
-    handlers = {},
-})
