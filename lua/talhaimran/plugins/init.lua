@@ -33,7 +33,10 @@ return {
         dependencies = {
             "williamboman/mason.nvim",
             "jose-elias-alvarez/null-ls.nvim",
-        }
+        },
+        config = function ()
+            require("talhaimran.null-ls")
+        end
     },
     {
         'nvim-telescope/telescope.nvim',
