@@ -1,5 +1,6 @@
 return {
     'jiangmiao/auto-pairs',
+    'mg979/vim-visual-multi',
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
     'tpope/vim-sleuth',
