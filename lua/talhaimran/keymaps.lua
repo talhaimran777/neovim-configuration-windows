@@ -99,6 +99,10 @@ nnoremap("<leader>ds", ":lua vim.diagnostic.enable()<CR>")
 -- Typescript OrganizeImports
 vim.cmd("command! -nargs=0 OR lua OrganizeImports()")
 
+-- Format
+vnoremap("<leader>f", ":Neoformat<CR>")
+nnoremap("<leader>f", ":Neoformat<CR>")
+
 -- Neogit
 nnoremap("<leader>gs", function()
   require("neogit").open()
@@ -125,5 +129,5 @@ function _smart_k()
 end
 
 function OrganizeImports()
-    vim.lsp.buf.execute_command({command = "_typescript.organizeImports", arguments = {vim.fn.expand("%:p")}})
+  vim.lsp.buf.execute_command({ command = "_typescript.organizeImports", arguments = { vim.fn.expand("%:p") } })
 end

@@ -1,5 +1,6 @@
 return {
     'jiangmiao/auto-pairs',
+    'sbdchd/neoformat',
     'mg979/vim-visual-multi',
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
@@ -35,7 +36,7 @@ return {
             "williamboman/mason.nvim",
             "jose-elias-alvarez/null-ls.nvim",
         },
-        config = function ()
+        config = function()
             require("talhaimran.null-ls")
         end
     },
@@ -120,6 +121,14 @@ return {
             vim.cmd([[colorscheme tokyonight-moon]])
         end
     },
+    { "ellisonleao/gruvbox.nvim", priority = 1000,     config = true,   lazy = true },
+    { "catppuccin/nvim",          name = "catppuccin", priority = 1000, config = true, lazy = true },
+    {
+        'navarasu/onedark.nvim',
+        priority = 1000,
+        config = true,
+        lazy = true
+    },
     {
         'nvim-lualine/lualine.nvim',
         opts = {
@@ -138,13 +147,13 @@ return {
         opts = {},
     },
     {
-        'nvim-treesitter/nvim-treesitter',
+        "nvim-treesitter/nvim-treesitter",
         dependencies = {
             'nvim-treesitter/nvim-treesitter-textobjects',
             'JoosepAlviste/nvim-ts-context-commentstring',
         },
-        build = ':TSUpdate',
-        config = true
+        build = ":TSUpdate",
+        event = { "BufReadPre", "BufNewFile" }
     },
     {
         "NeogitOrg/neogit",
@@ -158,7 +167,7 @@ return {
         dependencies = {
             "nvim-tree/nvim-web-devicons"
         },
-        config = function ()
+        config = function()
             require("nvim-tree").setup {
                 view = {
                     adaptive_size = true
