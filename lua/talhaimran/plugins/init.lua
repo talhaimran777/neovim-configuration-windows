@@ -117,8 +117,8 @@ return {
         lazy = false,
         priority = 1000,
         opts = {},
-        on_attach = function()
-            vim.cmd([[colorscheme tokyonight-moon]])
+        config = function()
+            vim.cmd([[colorscheme tokyonight-night]])
         end
     },
     { "ellisonleao/gruvbox.nvim", priority = 1000,     config = true,   lazy = true },
