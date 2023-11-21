@@ -113,20 +113,23 @@ return {
     },
     {
         "folke/tokyonight.nvim",
-        lazy = false,
+        lazy = true,
         priority = 1000,
         opts = {},
         config = function()
-            vim.cmd([[colorscheme tokyonight-night]])
+            -- vim.cmd([[colorscheme tokyonight-night]])
         end
     },
     { "ellisonleao/gruvbox.nvim", priority = 1000,     config = true,   lazy = true },
     { "catppuccin/nvim",          name = "catppuccin", priority = 1000, config = true, lazy = true },
+    { 'navarasu/onedark.nvim',    priority = 1000,     config = true,   lazy = true },
     {
-        'navarasu/onedark.nvim',
+        'Mofiqul/vscode.nvim',
         priority = 1000,
-        config = true,
-        lazy = true
+        lazy = false,
+        config = function()
+            vim.cmd([[colorscheme vscode]])
+        end
     },
     {
         'nvim-lualine/lualine.nvim',
