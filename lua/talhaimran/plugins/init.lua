@@ -1,5 +1,4 @@
 return {
-    'jiangmiao/auto-pairs',
     'sbdchd/neoformat',
     'mg979/vim-visual-multi',
     'tpope/vim-fugitive',
@@ -151,9 +150,14 @@ return {
         dependencies = {
             'nvim-treesitter/nvim-treesitter-textobjects',
             'JoosepAlviste/nvim-ts-context-commentstring',
+            'windwp/nvim-ts-autotag',
         },
         build = ":TSUpdate",
         event = { "BufReadPre", "BufNewFile" }
+    },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
     },
     {
         "NeogitOrg/neogit",
