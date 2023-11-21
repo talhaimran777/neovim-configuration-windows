@@ -51,9 +51,9 @@ xnoremap("gc", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visu
 -- nnoremap("<leader>s", ":CtrlSFFocus <CR>")
 
 -- Nvim Tree
-nnoremap("<A-x>", ":NvimTreeToggle<CR>")
-nnoremap("<A-f>", ":NvimTreeFindFileToggle<CR>")
-nnoremap("<A-r>", ":NvimTreeFocus<cr>R<c-w><c-p>:CtrlPClearCache<CR>")
+nnoremap("<A-x>", ":Neotree toggle<CR>")
+nnoremap("<A-f>", ":Neotree reveal<CR>")
+-- nnoremap("<A-r>", ":NvimTreeFocus<cr>R<c-w><c-p>:CtrlPClearCache<CR>")
 
 -- Vim Fugitive
 nnoremap("<leader>fh", ":0GcLog<CR>")
