@@ -8,6 +8,7 @@ return {
     'ton/vim-bufsurf',
     'terrortylor/nvim-comment',
     'ThePrimeagen/harpoon',
+    'alexghergh/nvim-tmux-navigation',
     {
         'neovim/nvim-lspconfig',
         dependencies = {
