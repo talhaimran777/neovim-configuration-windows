@@ -50,3 +50,6 @@ vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 -- Setting no wrap
 vim.opt.wrap = false
+
+-- Setting up default statusline
+vim.opt.statusline = " %t - %y %= %l / %L"
