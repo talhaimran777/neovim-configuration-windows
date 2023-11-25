@@ -18,7 +18,7 @@ nnoremap("<C-]>", "zL")
 nnoremap("<C-[>", "zH")
 
 -- Remove & paste but still in register
-xnoremap("<leader>p", "\"_dP")
+xnoremap("<leader>p", '"_dP')
 
 -- Window navigation
 nnoremap("<A-j>", "<C-w>j")
@@ -27,7 +27,7 @@ nnoremap("<A-h>", "<C-w>h")
 nnoremap("<A-l>", "<C-w>l")
 
 -- Telescope
-local telescope_builtin = require('telescope.builtin')
+local telescope_builtin = require("telescope.builtin")
 nnoremap("<A-g>", telescope_builtin.find_files)
 nnoremap("<A-p>", telescope_builtin.git_files)
 nnoremap("gr", telescope_builtin.lsp_references)
@@ -36,7 +36,10 @@ nnoremap("gt", telescope_builtin.lsp_type_definitions)
 nnoremap("ds", telescope_builtin.lsp_document_symbols)
 nnoremap("sd", telescope_builtin.diagnostics)
 nnoremap("gi", telescope_builtin.lsp_implementations)
-nnoremap("<leader>ps", require('telescope').extensions.live_grep_args.live_grep_args)
+nnoremap(
+  "<leader>ps",
+  require("telescope").extensions.live_grep_args.live_grep_args
+)
 
 -- Move text
 vnoremap("<", "<gv")
@@ -46,7 +49,10 @@ xnoremap("K", ":move '<-2<CR>gv-gv")
 
 -- Comments
 nnoremap("gcc", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>")
-xnoremap("gc", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
+xnoremap(
+  "gc",
+  '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>'
+)
 
 -- Ctrlsf
 -- nnoremap("<A-s>", ":CtrlSFToggle <CR>")
@@ -135,5 +141,8 @@ function _smart_k()
 end
 
 function OrganizeImports()
-  vim.lsp.buf.execute_command({ command = "_typescript.organizeImports", arguments = { vim.fn.expand("%:p") } })
+  vim.lsp.buf.execute_command({
+    command = "_typescript.organizeImports",
+    arguments = { vim.fn.expand("%:p") },
+  })
 end

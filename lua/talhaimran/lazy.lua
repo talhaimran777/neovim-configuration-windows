@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -16,4 +16,4 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('talhaimran.plugins')
+require("lazy").setup("talhaimran.plugins")
