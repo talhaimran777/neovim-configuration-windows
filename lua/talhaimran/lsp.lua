@@ -2,6 +2,8 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 
 local servers = {
+  html = {},
+  cssls = {},
   tsserver = {},
   tailwindcss = {},
   lua_ls = {

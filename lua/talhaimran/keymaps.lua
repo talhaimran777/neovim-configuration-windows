@@ -120,6 +120,10 @@ nnoremap("<leader>gs", function()
   require("neogit").open()
 end)
 
+-- Trouble Toggle
+nnoremap("<A-s>", ":TroubleToggle <CR>")
+nnoremap("<A-r>", ":TroubleRefresh <CR>")
+
 function _smart_j()
   local count = vim.v.count
   local mode = vim.fn.mode(1)
