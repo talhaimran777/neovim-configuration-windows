@@ -30,6 +30,12 @@ nnoremap("<A-l>", "<C-w>l")
 local telescope_builtin = require('telescope.builtin')
 nnoremap("<A-g>", telescope_builtin.find_files)
 nnoremap("<A-p>", telescope_builtin.git_files)
+nnoremap("gr", telescope_builtin.lsp_references)
+nnoremap("gd", telescope_builtin.lsp_definitions)
+nnoremap("gt", telescope_builtin.lsp_type_definitions)
+nnoremap("ds", telescope_builtin.lsp_document_symbols)
+nnoremap("sd", telescope_builtin.diagnostics)
+nnoremap("gi", telescope_builtin.lsp_implementations)
 nnoremap("<leader>ps", require('telescope').extensions.live_grep_args.live_grep_args)
 
 -- Move text

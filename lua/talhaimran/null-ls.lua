@@ -2,13 +2,13 @@ require("mason").setup()
 
 require("mason-null-ls").setup({
     ensure_installed = {
-        "prettier"
+        "prettierd"
     },
     automatic_installation = true
 })
 
 require("null-ls").setup({
     sources = {
-        require("null-ls").builtins.formatting.prettier
+        require("null-ls").builtins.formatting.prettierd
     }
 })
