@@ -52,12 +52,12 @@ vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 vim.opt.wrap = false
 
 -- Setting up default statusline
-vim.opt.statusline = " %t - %y %= %l / %L"
+vim.opt.statusline = " %t - %y %="
 
 -- Set the background color of the status line
 vim.api.nvim_exec(
   [[
-  hi StatusLine guibg=#3A3A3A guifg=#00ABAA
+  hi StatusLine guibg=#303143 guifg=#CAD1EF
 ]],
   false
 )

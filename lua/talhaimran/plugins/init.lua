@@ -150,30 +150,18 @@ return {
     },
   },
   {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1000,
-    opts = {},
-    config = function()
-      -- vim.cmd([[colorscheme tokyonight-night]])
-    end,
-  },
-  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, lazy = true },
-  {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    config = true,
-    lazy = true,
+    config = function()
+      vim.cmd([[colorscheme catppuccin-mocha]])
+    end,
   },
-  { "navarasu/onedark.nvim", priority = 1000, config = true, lazy = true },
   {
     "Mofiqul/vscode.nvim",
     priority = 1000,
-    lazy = false,
-    config = function()
-      vim.cmd([[colorscheme vscode]])
-    end,
+    lazy = true,
+    config = true,
   },
   {
     "lukas-reineke/indent-blankline.nvim",

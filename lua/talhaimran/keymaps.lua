@@ -33,7 +33,7 @@ nnoremap("<A-p>", telescope_builtin.git_files)
 nnoremap("gr", telescope_builtin.lsp_references)
 nnoremap("gd", telescope_builtin.lsp_definitions)
 nnoremap("gt", telescope_builtin.lsp_type_definitions)
-nnoremap("ds", telescope_builtin.lsp_document_symbols)
+-- nnoremap("ds", telescope_builtin.lsp_document_symbols)
 nnoremap("sd", telescope_builtin.diagnostics)
 nnoremap("gi", telescope_builtin.lsp_implementations)
 nnoremap(
