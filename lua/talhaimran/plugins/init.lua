@@ -2,10 +2,8 @@ return {
   "sbdchd/neoformat",
   "mg979/vim-visual-multi",
   "tpope/vim-fugitive",
-  "tpope/vim-rhubarb",
   "tpope/vim-sleuth",
   "tpope/vim-surround",
-  "ton/vim-bufsurf",
   "terrortylor/nvim-comment",
   "ThePrimeagen/harpoon",
   "alexghergh/nvim-tmux-navigation",
@@ -158,12 +156,6 @@ return {
     end,
   },
   {
-    "Mofiqul/vscode.nvim",
-    priority = 1000,
-    lazy = true,
-    config = true,
-  },
-  {
     "lukas-reineke/indent-blankline.nvim",
 
     main = "ibl",
@@ -207,10 +199,6 @@ return {
     dependencies = {
       "kevinhwang91/promise-async",
     },
-    config = true,
-  },
-  {
-    "rmagatti/auto-session",
     config = true,
   },
 }
