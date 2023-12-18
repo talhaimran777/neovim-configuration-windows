@@ -172,11 +172,6 @@ return {
     event = { "BufReadPre", "BufNewFile" },
   },
   {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    opts = {},
-  },
-  {
     "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim",
