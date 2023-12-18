@@ -86,6 +86,9 @@ nnoremap("N", "Nzzzv")
 -- Remap for reset buffer
 nnoremap("<leader>rr", ":e!<CR>")
 
+-- Remap to switch to the last buffer
+nnoremap("<A-6>", ":lua switch_to_last_buffer()<CR>")
+
 -- Keybindings Quick Fix List
 -- nnoremap("]q", ":cnext<CR>")
 -- nnoremap("[q", ":cprevious<CR>")
@@ -145,4 +148,8 @@ function OrganizeImports()
     command = "_typescript.organizeImports",
     arguments = { vim.fn.expand("%:p") },
   })
+end
+
+function switch_to_last_buffer()
+    vim.cmd('buffer#')
 end
