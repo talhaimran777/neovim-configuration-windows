@@ -1,0 +1,86 @@
+return {
+  "nvim-telescope/telescope.nvim",
+  branch = "0.1.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+      cond = function()
+        return vim.fn.executable("make") == 1
+      end,
+    },
+    {
+      "nvim-telescope/telescope-live-grep-args.nvim",
+      version = "^1.0.0",
+    },
+  },
+  config = function()
+    local telescope = require("telescope")
+    local trouble = require("trouble.providers.telescope")
+
+    telescope.load_extension("fzf")
+    telescope.load_extension("live_grep_args")
+
+    telescope.setup({
+      defaults = {
+        mappings = {
+          i = {
+            ["<S-j>"] = require("telescope.actions").move_selection_next,
+            ["<S-k>"] = require("telescope.actions").move_selection_previous,
+            ["<C-j>"] = require("telescope.actions").cycle_history_next,
+            ["<C-k>"] = require("telescope.actions").cycle_history_prev,
+            ["<c-t>"] = trouble.open_with_trouble,
+          },
+          n = {
+            ["<c-t>"] = trouble.open_with_trouble,
+          },
+        },
+      },
+    })
+  end,
+  keys = {
+    {
+      "<A-p>",
+      "<cmd>Telescope git_files<cr>",
+      desc = "Telescope Git Files",
+    },
+    {
+      "<A-g>",
+      "<cmd>Telescope find_files<cr>",
+      desc = "Telescope Find Files",
+    },
+    {
+      "gr",
+      "<cmd>Telescope lsp_references<cr>",
+      desc = "Telescope LSP References",
+    },
+    {
+      "gd",
+      "<cmd>Telescope lsp_definitions<cr>",
+      desc = "Telescope LSP Definations",
+    },
+    {
+      "gt",
+      "<cmd>Telescope lsp_type_definitions<cr>",
+      desc = "Telescope LSP Type Definations",
+    },
+    {
+      "gi",
+      "<cmd>Telescope lsp_implementations<cr>",
+      desc = "Telescope LSP Implementations",
+    },
+    {
+      "sd",
+      "<cmd>Telescope diagnostics<cr>",
+      desc = "Telescope LSP Diagnostics",
+    },
+    {
+      "<leader>ps",
+      function()
+        require("telescope").extensions.live_grep_args.live_grep_args()
+      end,
+      desc = "Telescope Find Text Across Project",
+    },
+  },
+}

@@ -8,59 +8,6 @@ return {
   "ThePrimeagen/harpoon",
   "alexghergh/nvim-tmux-navigation",
   {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      { "j-hui/fidget.nvim", tag = "legacy", opts = {} },
-      "folke/neodev.nvim",
-    },
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
-      "hrsh7th/cmp-nvim-lsp",
-      "rafamadriz/friendly-snippets",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-    },
-  },
-  {
-    "jay-babu/mason-null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "jose-elias-alvarez/null-ls.nvim",
-    },
-    config = function()
-      require("talhaimran.null-ls")
-    end,
-  },
-  {
-    "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make",
-        cond = function()
-          return vim.fn.executable("make") == 1
-        end,
-      },
-      {
-        "nvim-telescope/telescope-live-grep-args.nvim",
-        version = "^1.0.0",
-      },
-    },
-    config = function()
-      require("telescope").load_extension("fzf")
-      require("telescope").load_extension("live_grep_args")
-    end,
-  },
-  {
     "lewis6991/gitsigns.nvim",
     opts = {
       signs = {
@@ -157,9 +104,24 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-
     main = "ibl",
-    opts = {},
+    opts = {
+      indent = {
+        char = "│",
+        tab_char = "│",
+      },
+      scope = { enabled = false },
+      exclude = {
+        filetypes = {
+          "help",
+          "neo-tree",
+          "Trouble",
+          "trouble",
+          "lazy",
+          "mason",
+        },
+      },
+    },
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -172,13 +134,6 @@ return {
     event = { "BufReadPre", "BufNewFile" },
   },
   {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = true,
-  },
-  {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
@@ -187,10 +142,15 @@ return {
       "MunifTanjim/nui.nvim",
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
+    keys = {
+      { "<A-x>", "<cmd>Neotree toggle<cr>", desc = "NeoTree Toggle" },
+      { "<A-f>", "<cmd>Neotree reveal<cr>", desc = "NeoTree Reveal" },
+    },
     config = true,
   },
   {
     "kevinhwang91/nvim-ufo",
+    event = "BufEnter",
     dependencies = {
       "kevinhwang91/promise-async",
     },
