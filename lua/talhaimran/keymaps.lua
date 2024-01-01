@@ -57,6 +57,7 @@ nnoremap("N", "Nzzzv")
 
 -- Remap for reset buffer
 nnoremap("<leader>rr", ":e!<CR>")
+nnoremap("<leader>lr", ":LspRestart<CR>")
 
 -- Remap to switch to the last buffer
 nnoremap("<A-6>", ":lua switch_to_last_buffer()<CR>")
@@ -85,6 +86,10 @@ vim.cmd("command! -nargs=0 OR lua OrganizeImports()")
 -- Format
 vnoremap("<leader>f", ":Neoformat<CR>")
 nnoremap("<leader>f", ":Neoformat<CR>")
+
+-- Diff Get
+nnoremap("gh", "<cmd>diffget //2<CR>")
+nnoremap("gl", "<cmd>diffget //3<CR>")
 
 function _smart_j()
   local count = vim.v.count

@@ -76,6 +76,11 @@ return {
       desc = "Telescope LSP Diagnostics",
     },
     {
+      "<leader>pb",
+      "<cmd>Telescope buffers<cr>",
+      desc = "Telescope Find Text Across Project",
+    },
+    {
       "<leader>ps",
       function()
         require("telescope").extensions.live_grep_args.live_grep_args()
