@@ -24,6 +24,8 @@ return {
 
     telescope.setup({
       defaults = {
+        path_display = { "smart" },
+        sorting_strategy = "ascending",
         mappings = {
           i = {
             ["<S-j>"] = require("telescope.actions").move_selection_next,
@@ -35,6 +37,37 @@ return {
           n = {
             ["<c-t>"] = trouble.open_with_trouble,
           },
+        },
+      },
+      pickers = {
+        live_grep = {
+          theme = "dropdown",
+          previewer = false,
+        },
+
+        grep_string = {
+          theme = "dropdown",
+          previewer = false,
+        },
+
+        find_files = {
+          theme = "dropdown",
+          previewer = false,
+        },
+
+        git_files = {
+          theme = "dropdown",
+          previewer = false,
+        },
+
+        buffers = {
+          theme = "dropdown",
+          previewer = false,
+        },
+      },
+      extensions = {
+        live_grep_args = {
+          theme = "dropdown",
         },
       },
     })
