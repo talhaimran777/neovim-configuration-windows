@@ -120,5 +120,14 @@ return {
       end,
       desc = "Telescope Find Text Across Project",
     },
+    {
+      "<leader>w",
+      function()
+        local live_grep_args_shortcuts =
+          require("telescope-live-grep-args.shortcuts")
+        live_grep_args_shortcuts.grep_word_under_cursor()
+      end,
+      desc = "Telescope live grep for the word under the cursor",
+    },
   },
 }
