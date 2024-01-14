@@ -1,6 +1,9 @@
 -- Using ctrl-p for auto pairs
 vim.g.AutoPairsShortcutToggle = "<C-p>"
 
+-- Copilot
+vim.g.copilot_no_tab_map = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
 

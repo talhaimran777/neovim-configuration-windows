@@ -91,6 +91,12 @@ nnoremap("<leader>f", ":Neoformat<CR>")
 nnoremap("gh", "<cmd>diffget //2<CR>")
 nnoremap("gl", "<cmd>diffget //3<CR>")
 
+-- Copilot
+vim.keymap.set('i', '<C-l>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+
 function _smart_j()
   local count = vim.v.count
   local mode = vim.fn.mode(1)
