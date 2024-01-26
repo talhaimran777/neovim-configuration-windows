@@ -1,5 +1,6 @@
 return {
   "github/copilot.vim",
+  "dyng/ctrlsf.vim",
   "sbdchd/neoformat",
   "mg979/vim-visual-multi",
   "tpope/vim-fugitive",

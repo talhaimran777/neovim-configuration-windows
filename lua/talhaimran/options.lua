@@ -1,3 +1,10 @@
+-- Ctrlsf options
+vim.g.ctrlsf_position = "bottom"
+vim.g.ctrlsf_auto_focus = {
+  at = "start"
+}
+vim.g.ctrlsf_case_sensitive = 'yes'
+
 -- Using ctrl-p for auto pairs
 vim.g.AutoPairsShortcutToggle = "<C-p>"
 

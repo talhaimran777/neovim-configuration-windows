@@ -4,8 +4,9 @@ return {
   dependencies = {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
-    "hrsh7th/cmp-nvim-lsp",
     "rafamadriz/friendly-snippets",
+    "honza/vim-snippets",
+    "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
   },
@@ -13,6 +14,7 @@ return {
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     require("luasnip.loaders.from_vscode").lazy_load()
+    require("luasnip.loaders.from_snipmate").lazy_load()
     luasnip.config.setup({})
 
     cmp.setup({

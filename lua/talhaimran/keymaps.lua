@@ -3,6 +3,8 @@ local nnoremap = Remap.nnoremap
 local xnoremap = Remap.xnoremap
 local vnoremap = Remap.vnoremap
 
+local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
+
 -- Close Neovim
 nnoremap("<A-w>", ":q!<CR>")
 
@@ -25,6 +27,12 @@ nnoremap("<A-j>", "<C-w>j")
 nnoremap("<A-k>", "<C-w>k")
 nnoremap("<A-h>", "<C-w>h")
 nnoremap("<A-l>", "<C-w>l")
+
+-- Ctrlsf
+-- nnoremap("<A-s>", ":CtrlSFToggle <CR>")
+nnoremap("<leader>pi", ":CtrlSF -I -- ''<Left>")
+-- nnoremap("<leader>w", ":CtrlSF <CR>")
+-- nnoremap("<leader>s", ":CtrlSFFocus <CR>")
 
 -- Move text
 vnoremap("<", "<gv")
@@ -71,6 +79,9 @@ nnoremap("<A-6>", ":lua switch_to_last_buffer()<CR>")
 -- Tabularize
 vnoremap("<leader>t:", ":Tabularize /:<CR>")
 vnoremap("<leader>t=", ":Tabularize /=")
+
+-- Grep visual selection
+vnoremap("<leader>w", live_grep_args_shortcuts.grep_visual_selection)
 
 -- Move up & down with wrapped lines
 nnoremap("j", "v:lua._smart_j()", { expr = true, noremap = true })
