@@ -1,16 +1,16 @@
 return {
-  "NeogitOrg/neogit",
+  'NeogitOrg/neogit',
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    'nvim-lua/plenary.nvim',
   },
   config = true,
   keys = {
     {
-      "<leader>gs",
+      '<leader>gs',
       function()
-        require("neogit").open()
+        require('neogit').open()
       end,
-      desc = "Open Neogit",
+      desc = 'Open Neogit',
     },
   },
 }

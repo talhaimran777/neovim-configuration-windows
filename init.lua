@@ -1,1 +1,1 @@
-require("talhaimran")
+require('talhaimran')
