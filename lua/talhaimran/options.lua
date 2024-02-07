@@ -55,7 +55,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Folding options
-vim.o.foldcolumn = '1'
+vim.o.foldcolumn = '0'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
@@ -66,6 +66,9 @@ vim.opt.wrap = false
 
 -- Setting up default statusline
 vim.opt.statusline = ' %t - %y %='
+
+-- Hiding status line
+vim.opt.laststatus = 0
 
 -- Set the background color of the status line
 vim.api.nvim_exec(
