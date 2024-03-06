@@ -1,5 +1,5 @@
-require('talhaimran.lazy')
 require('talhaimran.options')
+require('talhaimran.lazy')
 require('talhaimran.treesitter')
 require('talhaimran.keymaps')
 require('talhaimran.comments')
