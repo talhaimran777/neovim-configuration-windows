@@ -28,16 +28,16 @@ return {
         sorting_strategy = 'ascending',
         mappings = {
           i = {
-            ['<S-j>'] = require('telescope.actions').move_selection_next,
-            ['<S-k>'] = require('telescope.actions').move_selection_previous,
+            ['<C-n>'] = require('telescope.actions').move_selection_next,
+            ['<C-p>'] = require('telescope.actions').move_selection_previous,
             ['<C-j>'] = require('telescope.actions').cycle_history_next,
             ['<C-k>'] = require('telescope.actions').cycle_history_prev,
             ['<c-t>'] = trouble.open_with_trouble,
           },
           n = {
             ['<c-t>'] = trouble.open_with_trouble,
-            ['<S-j>'] = require('telescope.actions').move_selection_next,
-            ['<S-k>'] = require('telescope.actions').move_selection_previous,
+            ['<C-n>'] = require('telescope.actions').move_selection_next,
+            ['<C-p>'] = require('telescope.actions').move_selection_previous,
             ['<C-j>'] = require('telescope.actions').cycle_history_next,
             ['<C-k>'] = require('telescope.actions').cycle_history_prev,
           },

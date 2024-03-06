@@ -71,7 +71,7 @@ vim.opt.statusline = ' %t - %y %='
 vim.opt.laststatus = 0
 
 -- Set CMD height
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 
 -- Set the background color of the status line
 vim.api.nvim_exec(
