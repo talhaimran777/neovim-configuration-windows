@@ -24,7 +24,6 @@ return {
 
     telescope.setup({
       defaults = {
-        path_display = { 'smart' },
         sorting_strategy = 'ascending',
         mappings = {
           i = {
