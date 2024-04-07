@@ -13,4 +13,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('talhaimran.plugins')
+require('lazy').setup(
+  { import = 'talhaimran.plugins' },
+  { change_detection = { notify = false } }
+)
