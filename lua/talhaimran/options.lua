@@ -2,12 +2,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Ctrlsf options
-vim.g.ctrlsf_position = 'bottom'
-vim.g.ctrlsf_auto_focus = {
-  at = 'start',
-}
-
 -- Copilot
 vim.g.copilot_filetypes = {
   ['*'] = true,

@@ -28,12 +28,6 @@ nnoremap('<A-k>', '<C-w>k')
 nnoremap('<A-h>', '<C-w>h')
 nnoremap('<A-l>', '<C-w>l')
 
--- Ctrlsf
--- nnoremap("<A-s>", ":CtrlSFToggle <CR>")
-nnoremap('<leader>pi', ":CtrlSF -I -- ''<Left>")
--- nnoremap("<leader>w", ":CtrlSF <CR>")
--- nnoremap("<leader>s", ":CtrlSFFocus <CR>")
-
 -- Move text
 vnoremap('<', '<gv')
 vnoremap('>', '>gv')
