@@ -68,7 +68,7 @@ nnoremap('<leader>rr', ':e!<CR>')
 nnoremap('<leader>lr', ':LspRestart<CR>')
 
 -- Remap to switch to the last buffer
-nnoremap('<A-6>', ':lua switch_to_last_buffer()<CR>')
+-- nnoremap('<A-6>', ':lua switch_to_last_buffer()<CR>') // Not using this anymore
 
 -- Keybindings Quick Fix List
 -- nnoremap("]q", ":cnext<CR>")

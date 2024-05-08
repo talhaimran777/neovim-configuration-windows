@@ -6,7 +6,6 @@ return {
   'tpope/vim-sleuth',
   'tpope/vim-surround',
   'terrortylor/nvim-comment',
-  'ThePrimeagen/harpoon',
   'alexghergh/nvim-tmux-navigation',
   {
     'lewis6991/gitsigns.nvim',
@@ -111,9 +110,6 @@ return {
     },
     build = ':TSUpdate',
     event = { 'BufReadPre', 'BufNewFile' },
-  },
-  {
-    'nvim-treesitter/nvim-treesitter-context',
   },
   {
     'nvim-neo-tree/neo-tree.nvim',

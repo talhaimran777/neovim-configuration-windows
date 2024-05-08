@@ -2,9 +2,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Enable break indent
-vim.opt.breakindent = true
-
 -- Ctrlsf options
 vim.g.ctrlsf_position = 'bottom'
 vim.g.ctrlsf_auto_focus = {
@@ -41,7 +38,6 @@ vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
-vim.o.smartcase = true
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
