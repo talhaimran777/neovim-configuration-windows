@@ -111,6 +111,9 @@ end)
 nnoremap('gh', '<cmd>diffget //2<CR>')
 nnoremap('gl', '<cmd>diffget //3<CR>')
 
+-- TSContext
+nnoremap('<leader>ct', ':TSContextToggle<CR>')
+
 function _smart_j()
   local count = vim.v.count
   local mode = vim.fn.mode(1)

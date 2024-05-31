@@ -16,6 +16,9 @@ return {
       cssls = {},
       tsserver = {},
       tailwindcss = {},
+      marksman = {
+        extensions = { 'md', 'mdx' },
+      },
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
