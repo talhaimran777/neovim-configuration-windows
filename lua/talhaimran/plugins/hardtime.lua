@@ -4,6 +4,7 @@ return {
   opts = {
     disabled_filetypes = {
       'neo-tree',
+      'harpoon',
     },
   },
 }

@@ -1,4 +1,4 @@
--- Setting up leader key 
+-- Setting up leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
