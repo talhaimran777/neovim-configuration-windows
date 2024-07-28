@@ -5,6 +5,8 @@ return {
     disabled_filetypes = {
       'neo-tree',
       'harpoon',
+      'trouble',
+      'qf',
     },
   },
 }

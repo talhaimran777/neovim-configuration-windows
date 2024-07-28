@@ -23,11 +23,6 @@ treesitter.setup({
 
   highlight = { enable = true },
   indent = { enable = true },
-  autotag = {
-    enable = true,
-    enable_rename = true,
-    enable_close_on_slash = false,
-  },
   incremental_selection = {
     enable = true,
     keymaps = {

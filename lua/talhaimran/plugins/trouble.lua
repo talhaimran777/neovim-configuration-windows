@@ -3,7 +3,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {},
   keys = {
-    { '<A-s>', '<cmd>TroubleToggle<cr>', desc = 'Trouble Toggle' },
-    { '<A-r>', '<cmd>TroubleRefresh<cr>', desc = 'Trouble Refresh' },
+    { '<A-s>', '<cmd>Trouble telescope toggle<cr>', desc = 'Trouble Telescope Toggle' },
+    { '<A-r>', '<cmd>Trouble telescope refresh<cr>', desc = 'Trouble Telescope Refresh' },
   },
 }
