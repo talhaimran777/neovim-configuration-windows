@@ -32,4 +32,5 @@ treesitter.setup({
       node_decremental = '<M-space>',
     },
   },
+  autopairs = { enable = true },
 })
