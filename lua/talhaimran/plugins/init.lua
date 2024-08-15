@@ -14,14 +14,6 @@ return {
     end,
   },
   {
-    'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'JoosepAlviste/nvim-ts-context-commentstring',
-    },
-    build = ':TSUpdate',
-    event = { 'BufReadPre', 'BufNewFile' },
-  },
-  {
     'kevinhwang91/nvim-ufo',
     event = 'BufEnter',
     dependencies = {
