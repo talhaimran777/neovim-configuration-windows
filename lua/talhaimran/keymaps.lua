@@ -61,19 +61,6 @@ nnoremap('N', 'Nzzzv')
 nnoremap('<leader>rr', ':e!<CR>')
 nnoremap('<leader>lr', ':LspRestart<CR>')
 
--- Remap to switch to the last buffer
--- nnoremap('<A-6>', ':lua switch_to_last_buffer()<CR>') // Not using this anymore
-
--- Keybindings Quick Fix List
--- nnoremap("]q", ":cnext<CR>")
--- nnoremap("[q", ":cprevious<CR>")
--- nnoremap("<leader>qo", ":copen<CR>")
--- nnoremap("<leader>qc", ":cclose<CR>")
-
--- Tabularize
-vnoremap('<leader>t:', ':Tabularize /:<CR>')
-vnoremap('<leader>t=', ':Tabularize /=')
-
 -- Grep visual selection
 vnoremap('<leader>w', live_grep_args_shortcuts.grep_visual_selection)
 
@@ -136,8 +123,4 @@ function OrganizeImports()
     command = '_typescript.organizeImports',
     arguments = { vim.fn.expand('%:p') },
   })
-end
-
-function switch_to_last_buffer()
-  vim.cmd('buffer#')
 end

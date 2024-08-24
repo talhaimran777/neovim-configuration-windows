@@ -24,14 +24,12 @@ vim.o.mouse = 'a'
 --  See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
 
--- Enable break indent
-vim.o.breakindent = true
-
 -- Save undo history
 vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
+vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
@@ -69,7 +67,13 @@ vim.o.foldenable = true
 vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 -- Setting no wrap
-vim.opt.wrap = false
+vim.opt.wrap = true
+
+-- Enable break indent
+vim.o.breakindent = true
+
+-- Setting line break
+vim.opt.linebreak = true
 
 -- Setting up default statusline
 vim.opt.statusline = ' %t - %y %='
