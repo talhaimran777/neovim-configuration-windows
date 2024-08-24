@@ -7,6 +7,8 @@ return {
       'harpoon',
       'trouble',
       'qf',
+      'NeogitStatus',
+      'NeogitCommitView',
     },
   },
 }
