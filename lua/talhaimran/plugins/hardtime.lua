@@ -9,6 +9,7 @@ return {
       'qf',
       'NeogitStatus',
       'NeogitCommitView',
+      'mason',
     },
   },
 }
