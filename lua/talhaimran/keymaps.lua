@@ -79,7 +79,7 @@ vim.cmd('command! -nargs=0 OR lua OrganizeImports()')
 nnoremap('<A-y>', function()
   vim.lsp.buf.format({
     filter = function(client)
-      return client.name ~= 'tsserver' and client.name ~= 'lua_ls'
+      return client.name ~= 'ts_ls' and client.name ~= 'lua_ls'
     end,
     async = true,
   })
@@ -88,7 +88,7 @@ end)
 xnoremap('<A-y>', function()
   vim.lsp.buf.format({
     filter = function(client)
-      return client.name ~= 'tsserver' and client.name ~= 'lua_ls'
+      return client.name ~= 'ts_ls' and client.name ~= 'lua_ls'
     end,
     async = true,
   })
@@ -97,6 +97,9 @@ end)
 -- Diff Get
 nnoremap('gh', '<cmd>diffget //2<CR>')
 nnoremap('gl', '<cmd>diffget //3<CR>')
+
+-- Remap zc to create and do fold
+nnoremap('zc', 'V$%ojokzfzzk')
 
 function _smart_j()
   local count = vim.v.count
