@@ -72,6 +72,9 @@ nnoremap('k', 'v:lua._smart_k()', { expr = true, noremap = true })
 nnoremap('<leader>dh', ':lua vim.diagnostic.disable()<CR>')
 nnoremap('<leader>ds', ':lua vim.diagnostic.enable()<CR>')
 
+-- Copilot Chat
+nnoremap('<leader>cc', ':CopilotChatToggle<CR>')
+
 -- Typescript OrganizeImports
 vim.cmd('command! -nargs=0 OR lua OrganizeImports()')
 
@@ -99,7 +102,9 @@ nnoremap('gh', '<cmd>diffget //2<CR>')
 nnoremap('gl', '<cmd>diffget //3<CR>')
 
 -- Remap zc to create and do fold
-nnoremap('zc', 'V$%ojokzfzzk')
+nnoremap('zc', 'V$%ojokzfk')
+
+nnoremap('zo', 'jzok')
 
 function _smart_j()
   local count = vim.v.count

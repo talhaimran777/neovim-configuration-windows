@@ -14,7 +14,7 @@ return {
     local servers = {
       html = {},
       cssls = {},
-      tsserver = {},
+      ts_ls = {},
       tailwindcss = {},
       marksman = {
         extensions = { 'md', 'mdx' },
