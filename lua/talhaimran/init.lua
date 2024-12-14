@@ -1,5 +1,3 @@
 require('talhaimran.options')
 require('talhaimran.lazy')
 require('talhaimran.keymaps')
-require('talhaimran.comments')
-require('talhaimran.nvim-tmux-navigator')

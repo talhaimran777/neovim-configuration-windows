@@ -3,8 +3,6 @@ return {
   'tpope/vim-fugitive',
   'tpope/vim-sleuth',
   'tpope/vim-surround',
-  'terrortylor/nvim-comment',
-  'alexghergh/nvim-tmux-navigation',
   {
     'catppuccin/nvim',
     name = 'catppuccin',
@@ -16,7 +14,7 @@ return {
   {
     {
       'CopilotC-Nvim/CopilotChat.nvim',
-      branch = 'canary',
+      branch = 'main',
       dependencies = {
         { 'zbirenbaum/copilot.lua' },
         { 'nvim-lua/plenary.nvim' },
