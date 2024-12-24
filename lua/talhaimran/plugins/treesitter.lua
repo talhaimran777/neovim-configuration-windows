@@ -1,8 +1,5 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  dependencies = {
-    'JoosepAlviste/nvim-ts-context-commentstring',
-  },
   build = ':TSUpdate',
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()

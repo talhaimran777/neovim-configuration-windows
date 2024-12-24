@@ -15,6 +15,9 @@ nnoremap('<A-c>', ':bdelete<CR>')
 nnoremap('<C-Left>', ':vertical resize -5<CR>')
 nnoremap('<C-Right>', ':vertical resize +5<CR>')
 
+nnoremap('<C-Up>', ':horizontal resize -5<CR>')
+nnoremap('<C-Down>', ':horizontal resize +5<CR>')
+
 -- Horizontal navigation
 nnoremap('<C-]>', 'zL')
 nnoremap('<C-[>', 'zH')
@@ -33,13 +36,6 @@ vnoremap('<', '<gv')
 vnoremap('>', '>gv')
 xnoremap('J', ":move '>+1<CR>gv-gv")
 xnoremap('K', ":move '<-2<CR>gv-gv")
-
--- Comments
-nnoremap('gcc', "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>")
-xnoremap(
-  'gc',
-  '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>'
-)
 
 -- Vim Fugitive
 nnoremap('<leader>fh', ':0GcLog<CR>')
