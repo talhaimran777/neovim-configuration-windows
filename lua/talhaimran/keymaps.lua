@@ -2,6 +2,7 @@ local Remap = require('talhaimran.keymap')
 local nnoremap = Remap.nnoremap
 local xnoremap = Remap.xnoremap
 local vnoremap = Remap.vnoremap
+local inoremap = Remap.inoremap
 
 local live_grep_args_shortcuts = require('telescope-live-grep-args.shortcuts')
 
@@ -104,6 +105,9 @@ nnoremap('zo', 'jzok')
 -- Splits
 nnoremap('<leader>sl', '<cmd>vsplit<CR>')
 nnoremap('<leader>sj', '<cmd>split<CR>')
+
+-- Use alt + backspace to close delete word
+inoremap('<A-BS>', '<C-w>')
 
 function _smart_j()
   local count = vim.v.count
