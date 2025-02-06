@@ -18,9 +18,6 @@ return {
     local telescope = require('telescope')
     local trouble = require('trouble.sources.telescope')
 
-    telescope.load_extension('fzf')
-    telescope.load_extension('live_grep_args')
-
     telescope.setup({
       defaults = {
         sorting_strategy = 'ascending',
@@ -72,9 +69,13 @@ return {
       extensions = {
         live_grep_args = {
           theme = 'dropdown',
+          previewer = false,
         },
       },
     })
+
+    telescope.load_extension('fzf')
+    telescope.load_extension('live_grep_args')
   end,
   keys = {
     {
