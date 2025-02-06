@@ -44,6 +44,8 @@ vim.opt.timeoutlen = 300
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+vim.o.colorcolumn = '80'
+
 -- Sets how neovim will display certain whitespace in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
