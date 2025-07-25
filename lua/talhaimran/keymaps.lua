@@ -70,29 +70,14 @@ nnoremap('<leader>dh', ':lua vim.diagnostic.disable()<CR>')
 nnoremap('<leader>ds', ':lua vim.diagnostic.enable()<CR>')
 
 -- Avante
-nnoremap('<leader>cc', ':AvanteToggle<CR>')
+-- nnoremap('<leader>cc', ':AvanteToggle<CR>')
 
 -- Typescript OrganizeImports
 vim.cmd('command! -nargs=0 OR lua OrganizeImports()')
 
 -- Format
-nnoremap('<A-y>', function()
-  vim.lsp.buf.format({
-    filter = function(client)
-      return client.name ~= 'ts_ls' and client.name ~= 'lua_ls'
-    end,
-    async = true,
-  })
-end)
-
-xnoremap('<A-y>', function()
-  vim.lsp.buf.format({
-    filter = function(client)
-      return client.name ~= 'ts_ls' and client.name ~= 'lua_ls'
-    end,
-    async = true,
-  })
-end)
+nnoremap('<A-y>', ':Format<CR>')
+xnoremap('<A-y>', ':Format<CR>')
 
 -- Diff Get
 nnoremap('gh', '<cmd>diffget //2<CR>')

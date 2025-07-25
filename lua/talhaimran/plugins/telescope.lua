@@ -1,6 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   branch = '0.1.x',
+  commit = 'b4da76be54691e854d3e0e02c36b0245f945c2c7',
   dependencies = {
     {
       'nvim-telescope/telescope-fzf-native.nvim',
@@ -129,7 +130,7 @@ return {
       '<leader>w',
       function()
         local live_grep_args_shortcuts =
-          require('telescope-live-grep-args.shortcuts')
+            require('telescope-live-grep-args.shortcuts')
         live_grep_args_shortcuts.grep_word_under_cursor()
       end,
       desc = 'Telescope live grep for the word under the cursor',

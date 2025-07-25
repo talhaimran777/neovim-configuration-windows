@@ -86,20 +86,18 @@ vim.opt.laststatus = 0
 -- Set CMD height
 vim.opt.cmdheight = 1
 
--- Defining lsp icons
-vim.fn.sign_define(
-  'DiagnosticSignError',
-  { text = '', texthl = 'DiagnosticSignError' }
-)
-vim.fn.sign_define(
-  'DiagnosticSignWarn',
-  { text = '', texthl = 'DiagnosticSignWarn' }
-)
-vim.fn.sign_define(
-  'DiagnosticSignInfo',
-  { text = '', texthl = 'DiagnosticSignInfo' }
-)
-vim.fn.sign_define(
-  'DiagnosticSignHint',
-  { text = '', texthl = 'DiagnosticSignHint' }
-)
+-- Diagnostics configuration
+vim.diagnostic.config({
+  virtual_text = false,
+  update_in_insert = false,
+  underline = false,
+  severity_sort = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '',
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.HINT] = '',
+      [vim.diagnostic.severity.INFO] = '',
+    }
+  }
+})
