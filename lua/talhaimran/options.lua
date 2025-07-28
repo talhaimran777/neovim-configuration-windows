@@ -67,6 +67,8 @@ vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.opt.foldmethod = 'manual'
+vim.opt.foldminlines = 0
 
 -- Setting no wrap
 vim.opt.wrap = true
